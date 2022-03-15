@@ -1,8 +1,7 @@
-@mixin flexbox($justify-content, $align-items, $flex-direction) {
+@mixin flexbox($justify-content, $align-items) {
   display: flex;
   justify-content: $justify-content;
   align-items: $align-items;
-  flex-direction: $flex-direction;
   @content;
 }
 
@@ -37,7 +36,7 @@
 }
 
 @mixin wrapper() {
-  // width: 100%;
+   width: 100%;
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
