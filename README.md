@@ -1,1 +1,5 @@
-# new__project
+- The name of this project is new__project.
+- This is a single page website made for the purpose of practicing. 
+- The whole project was built using semantic HTML5, CSS3 with the preprocessor SCSS. 
+- It's part of a series of projects i made during last month.
+- Feel free to tell your opinion about this project, download it for the purpose of practice.
