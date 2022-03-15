@@ -2,7 +2,7 @@
 .header {
   padding: 24px;
   &__holder {
-    @include flexbox(space-between, center, row);
+    @include flexbox(space-between, center);
     @include container();
     @include breakpoint(desktop) {
       @include wrapper();
@@ -30,8 +30,10 @@
 //////////// nav ////////////
 .nav {
   &__list {
-    @include flexbox(space-between, center, row);
     margin: 10px 0 8px 0;
+  }
+  &__item {
+    display: inline-block;
   }
   &__link {
     @include font(18px, 25px, 400, $primary-color);
@@ -51,7 +53,8 @@
 .register {
   @include container();
   @include breakpoint(desktop) {
-    @include flexbox(space-around, center, row-reverse);
+    @include flexbox(space-around, center);
+    flex-direction: row-reverse;
     @include wrapper();
     margin-top: 120px;
   }
@@ -127,7 +130,8 @@
     margin-top: 120px;
     @include breakpoint(desktop) {
       text-align: left;
-      @include flexbox(space-between, center, row-reverse);
+      @include flexbox(space-between, center);
+      flex-direction: row-reverse;
       @include wrapper();
       margin-top: 120px;
       padding-left: 66px;
@@ -207,7 +211,7 @@
   }
 
   &__mainHolder {
-    @include flexbox(flex-start, center, row);
+    @include flexbox(flex-start, center);
     margin-top: 10px;
     @include breakpoint(desktop) {
       margin-top: 15px;
@@ -247,7 +251,7 @@
     margin-top: 100px;
     padding: 60px 0 60px 0;
     @include breakpoint(desktop) {
-      @include flexbox(center, center, row);
+      @include flexbox(center, center);
     }
   }
 
@@ -319,13 +323,13 @@
     @include container();
     text-align: left;
     @include breakpoint(desktop) {
-      @include flexbox(space-between, center, row);
+      @include flexbox(space-between, center);
       @include wrapper();
     }
   }
   &__second {
     @include breakpoint(desktop) {
-      @include flexbox(space-evenly, center, row);
+      @include flexbox(space-evenly, center);
       width: 100%;
     }
   }
@@ -342,7 +346,8 @@
   }
 
   &__first {
-    @include flexbox(center, flex-start, column);
+    @include flexbox(center, flex-start);
+    flex-direction: column;
     @include breakpoint(desktop) {
       margin-bottom: 35px;
     }
@@ -394,7 +399,7 @@
     margin-bottom: 50px;
   }
   &__list {
-    @include flexbox(center, center, row);
+    @include flexbox(center, center);
   }
   &__link {
     min-height: 30px;
