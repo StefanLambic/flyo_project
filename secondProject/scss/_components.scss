@@ -1,0 +1,410 @@
+//////////// header ////////////
+.header {
+  padding: 24px;
+  &__holder {
+    @include flexbox(space-between, center, row);
+    @include container();
+    @include breakpoint(desktop) {
+      @include wrapper();
+    }
+  }
+
+  &__logo {
+    display: block;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__logo-src {
+    display: block;
+    max-height: 27px;
+    max-width: 100%;
+    margin: 10px 0 10px 0;
+    @include breakpoint(desktop) {
+      max-height: 35px;
+    }
+  }
+}
+
+//////////// nav ////////////
+.nav {
+  &__list {
+    @include flexbox(space-between, center, row);
+    margin: 10px 0 8px 0;
+  }
+  &__link {
+    @include font(18px, 25px, 400, $primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 11px;
+    &:hover {
+      color: $link-color;
+    }
+    @include breakpoint(desktop) {
+      margin-left: 40px;
+    }
+  }
+}
+
+//////////// register ////////////
+.register {
+  @include container();
+  @include breakpoint(desktop) {
+    @include flexbox(space-around, center, row-reverse);
+    @include wrapper();
+    margin-top: 120px;
+  }
+  &__image {
+    display: block;
+    margin-top: 100px;
+    @include breakpoint(desktop) {
+      margin: 0 auto;
+    }
+  }
+  &__img-src {
+    display: block;
+    max-width: 334px;
+    margin: 0 auto;
+    @include breakpoint(desktop) {
+      max-width: 655px;
+    }
+  }
+  &__form {
+    margin-top: 10px;
+    text-align: center;
+    @include breakpoint(desktop) {
+      text-align: left;
+      margin-top: 5px;
+    }
+  }
+  &__input {
+    min-width: 300px;
+    border: 2px solid #a8a8a8;
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 5px;
+    padding-left: 18px;
+  }
+
+  &__title {
+    @include font(27px, 40px, 700, $primary-color);
+    margin: 32px 0 27px 0;
+    @include breakpoint(desktop) {
+      max-width: 450px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    @include font(30px, 40px, 700, $primary-color);
+  }
+
+  &__text {
+    @include font(18px, 25px, 400, $primary-color);
+    max-width: 354px;
+    @include breakpoint(desktop) {
+      max-width: 538px;
+      text-align: left;
+    }
+  }
+  &__btn {
+    text-align: center;
+    @include button(12px 106px);
+    margin-top: 15px;
+    &:hover {
+      opacity: 0.7;
+    }
+    @include breakpoint(desktop) {
+      padding: 12px 57px;
+      margin-left: 10px;
+    }
+  }
+}
+//////////// productive ////////////
+.productive {
+  &__holder {
+    @include container();
+    margin-top: 120px;
+    @include breakpoint(desktop) {
+      text-align: left;
+      @include flexbox(space-between, center, row-reverse);
+      @include wrapper();
+      margin-top: 120px;
+      padding-left: 66px;
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 325px;
+    max-height: 325px;
+    @include breakpoint(desktop) {
+      max-width: 665px;
+    }
+  }
+  &__ilustration-src {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__title {
+    @include font(21px, 30px, 700, $primary-color);
+    margin-bottom: 17px;
+    @include breakpoint(desktop) {
+      @include font(26px, 32px, 700, $primary-color);
+    }
+  }
+  &__text {
+    @include font(16px, 21px, 400, $primary-color);
+    margin-bottom: 15px;
+    max-width: 330px;
+    text-align: left;
+    @include breakpoint(desktop) {
+      max-width: 500px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    margin: 35px 0 35px 0;
+    @include font(18px, 20px, 700, $link-color);
+    &::after {
+      content: "";
+      height: 2px;
+      width: 171px;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      background-color: $link-color;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+    @include breakpoint(desktop) {
+      margin: 5px 0 65px 0;
+    }
+  }
+  &__info {
+    @include font(16px, 35px, 400, $primary-color);
+    padding-top: 20px;
+    text-align: left;
+    @include breakpoint(desktop) {
+      max-width: 332px;
+    }
+  }
+  &__icon {
+    display: block;
+    position: absolute;
+    min-width: 16px;
+    height: auto;
+    top: 1px;
+    left: 1px;
+  }
+  &__bot {
+    position: relative;
+    padding: 5px;
+  }
+
+  &__mainHolder {
+    @include flexbox(flex-start, center, row);
+    margin-top: 10px;
+    @include breakpoint(desktop) {
+      margin-top: 15px;
+    }
+  }
+  &__secondHolder {
+    margin-left: 10px;
+    text-align: left;
+  }
+  &__avatarHolder {
+    max-width: 40px;
+    max-height: 40px;
+    display: block;
+    margin-left: 5px;
+  }
+  &__avatar {
+    border-radius: 50%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__founder {
+    display: block;
+    @include font(14px, 16px, 400, $primary-color);
+  }
+
+  &__name {
+    display: block;
+    @include font(16px, 18px, 700, $primary-color);
+  }
+}
+//////////// access ////////////
+.access {
+  &__holder {
+    background-color: $first-footer;
+    margin-top: 100px;
+    padding: 60px 0 60px 0;
+    @include breakpoint(desktop) {
+      @include flexbox(center, center, row);
+    }
+  }
+
+  &__content {
+    text-align: center;
+    @include container();
+    @include breakpoint(desktop) {
+      max-width: 537px;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    @include font(22px, 25px, 700, $white);
+    margin-bottom: 20px;
+    @include breakpoint(desktop) {
+      @include font(26px, 30px, 700, $white);
+    }
+  }
+
+  &__text {
+    @include font(18px, 22px, 400, $white);
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    margin-top: 20px;
+  }
+
+  &__form-holder {
+    text-align: center;
+    @include breakpoint(desktop) {
+      max-width: 360px;
+      text-align: left;
+      margin: 0 auto;
+    }
+  }
+
+  &__input {
+    min-width: 300px;
+    border: 2px solid $light-gray;
+    min-height: 45px;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 5px;
+    padding-left: 18px;
+    @include breakpoint(desktop) {
+      min-width: 385px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    @include button(12px 73px);
+    margin-top: 15px;
+    @include breakpoint(desktop) {
+      @include button(12px 30px);
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+//////////// footer  ////////////
+.footer {
+  padding: 50px;
+  background-color: $second-footer;
+  &__holder {
+    @include container();
+    text-align: left;
+    @include breakpoint(desktop) {
+      @include flexbox(space-between, center, row);
+      @include wrapper();
+    }
+  }
+  &__second {
+    @include breakpoint(desktop) {
+      @include flexbox(space-evenly, center, row);
+      width: 100%;
+    }
+  }
+  &__contact {
+    @include font(16px, 22px, 400, $white);
+    margin-top: 5px;
+    @include breakpoint(desktop) {
+      min-width: 250px;
+    }
+    &:hover {
+      color: $link-color;
+      cursor: pointer;
+    }
+  }
+
+  &__first {
+    @include flexbox(center, flex-start, column);
+    @include breakpoint(desktop) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__src {
+    display: block;
+    max-height: 46px;
+    max-width: 100%;
+    margin: 10px 0 10px 0;
+  }
+
+  .main {
+    &__link {
+      @include font(16px, 22px, 400, $white);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      &:hover {
+        color: $link-color;
+      }
+    }
+    &__list {
+      margin: 45px 0 25px 0px;
+    }
+  }
+}
+.secondary {
+  &__link {
+    @include font(16px, 22px, 400, $white);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    &:hover {
+      color: $link-color;
+    }
+  }
+  &__list {
+    margin-bottom: 25px;
+  }
+}
+.third {
+  @include breakpoint(desktop) {
+    margin-right: 200px;
+    margin-bottom: 50px;
+  }
+  &__list {
+    @include flexbox(center, center, row);
+  }
+  &__link {
+    min-height: 30px;
+    min-width: 30px;
+    fill: $white;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    &:hover {
+      fill: $link-color;
+    }
+  }
+}
